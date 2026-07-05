@@ -10,8 +10,8 @@
     
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     
-    <link class="favicon-png" rel="icon" type="image/png" sizes="192x192" href="1000320254.png">
-    <link class="favicon-png" rel="icon" type="image/png" sizes="512x512" href="1000320254.png">
+    <link class="favicon-png" rel="icon" type="image/png" sizes="192x192" href="bellazo_icon.png">
+    <link class="favicon-png" rel="icon" type="image/png" sizes="512x512" href="bellazo_icon.png">
     <link class="manifest" href="manifest.json">
 
     <!-- Importação da Fonte Cabin -->
@@ -124,7 +124,6 @@
             font-size: 35px;
             font-weight: 700;
             letter-spacing: -0.3px;
-            white-space:;
         }
 
        .sync-icon-btn {
@@ -723,8 +722,6 @@
     </svg>
 </button>
 
-</button>
-
                     </header>
 
                     <!-- DASHBOARD -->
@@ -985,11 +982,14 @@
             }
         }
 
-        function openCardActions(id, description) {
-            activeCardId = id;
-            actionTitle.textContent = `Lançamento: "${description}"`;
-            toggleActionModal();
-        }
+        function openCardActions(id) {
+    activeCardId = id;
+    const t = transactions.find(item => item.id === id);
+    const description = t ? t.description : '';
+    actionTitle.textContent = `Lançamento: "${description}"`;
+    toggleActionModal();
+}
+
 
         function triggerCardEdit() {
             toggleActionModal();
@@ -1124,7 +1124,7 @@
                 const cardDiv = document.createElement('div');
                 cardDiv.className = 't-item-card';
                 // Adiciona o gatilho inteligente de clique em todo o corpo do card
-                cardDiv.setAttribute('onclick', `openCardActions('${t.id}', '${t.description.replace(/'/g, "\\'")}')`);
+                cardDiv.setAttribute('onclick', `openCardActions('${t.id}')`);
                 
                 cardDiv.innerHTML = `
                     <div class="t-card-left">
@@ -1253,6 +1253,15 @@
             populateCategoryFilter();
             init();
         }
+        // Registrar o Service Worker para suporte offline
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js')
+            .then(reg => console.log('Service Worker registrado com sucesso!', reg))
+            .catch(err => console.error('Falha ao registrar o Service Worker:', err));
+    });
+}
+
     </script>
 </body>
 </html>
