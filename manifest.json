@@ -7,7 +7,7 @@
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#F4F6F5",
-  "theme_color": "#F4F6F5",
+  "theme_color": "#014a4d",
   "icons": [
     {
       "src": "bellazo_icon.png",
