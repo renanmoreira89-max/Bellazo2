@@ -6,7 +6,7 @@
     <title>BellaZô Finanças</title>
     
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="theme-color" content="#1A3C38">
+    <meta name="theme-color" content="#                                        014a4d">
     
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     
@@ -24,8 +24,8 @@
     
     <style>
         :root {
-            --primary: #1A3C38;       
-            --accent: #1A3C38;        
+            --primary: #014a4d;       
+            --accent: #014a4d;        
             --verde: #00B466;         
             --income: #209F8B;        
             --expense: #BA1A1A;       
@@ -55,8 +55,8 @@
         /* --- ESTRUTURA FIXA SUPERIOR --- */
         .fixed-top-container {
             flex-shrink: 0;
-            background-color: #1A3C38;
-            padding: 15px 16px 15px 16px;
+            background-color: #014a4d;
+            padding: 10px 16px 15px 16px;
             z-index: 10;
             border-radius: 0 0 40px 40px;
             box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
@@ -66,13 +66,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 40px 4px 30px 4px;
+            padding: 0px 4px 20px 4px;
         }
 
         header h1 {
             color: #ffffff;
             font-size: 45px;
-            font-weight: 700;
+            font-weight: 600;
             letter-spacing: -0.3px;
         }
 
@@ -105,7 +105,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
             z-index: 5000;
@@ -266,7 +266,7 @@
             scroll-snap-align: start;
             overflow-y: auto;
             overflow-x: hidden;
-            padding: 12px 16px 70px 16px;
+            padding: 12px 13px 70px 13px;
         }
 
         .container {
@@ -402,7 +402,7 @@
         .card {
             background: var(--card-bg);
             padding: 30px 24px;
-            border-radius: 30px;
+            border-radius: 35px;
             box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
             text-align: left;
             border: 1px solid #E1E3E1; 
@@ -415,7 +415,7 @@
             border: none;
         }
         
-        .card.balance h3 { color: #A3B8B6; }
+        .card.balance h3 { color: #ffffff; }
         .card.balance p { color: var(--verde) !important; }
 
         .card h3 {
@@ -880,12 +880,12 @@
 
     <!-- BOTÃO FLUTUANTE DE SINCRONIZAÇÃO (CANTO INFERIOR ESQUERDO) -->
     <button class="sync-icon-btn" id="menu-toggle-btn" onclick="toggleModal()" title="Sincronizar">
-        <svg viewBox="-2.4 -2.4 28.80 28.80" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.6807 14.5869C19.1708 14.5869 22 11.7692 22 8.29344C22 4.81767 19.1708 2 15.6807 2C12.1907 2 9.3615 4.81767 9.3615 8.29344C9.3615 9.90338 10.0963 11.0743 10.0963 11.0743L2.45441 18.6849C2.1115 19.0264 1.63143 19.9143 2.45441 20.7339L3.33616 21.6121C3.67905 21.9048 4.54119 22.3146 5.2466 21.6121L6.27531 20.5876C7.30403 21.6121 8.4797 21.0267 8.92058 20.4412C9.65538 19.4167 8.77362 18.3922 8.77362 18.3922L9.06754 18.0995C10.4783 19.5045 11.7128 18.6849 12.1537 18.0995C12.8885 17.075 12.1537 16.0505 12.1537 16.0505C11.8598 15.465 11.272 15.465 12.0067 14.7333L12.8885 13.8551C13.5939 14.4405 15.0439 14.5869 15.6807 14.5869Z" stroke="#ffffff" stroke-width="1.5" stroke-linejoin="round"></path> <path d="M17.8853 8.29353C17.8853 9.50601 16.8984 10.4889 15.681 10.4889C14.4635 10.4889 13.4766 9.50601 13.4766 8.29353C13.4766 7.08105 14.4635 6.09814 15.681 6.09814C16.8984 6.09814 17.8853 7.08105 17.8853 8.29353Z" stroke="#ffffff" stroke-width="1.5"></path> </g></svg>
+        <svg viewBox="-2.4 -2.4 28.80 28.80" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.6807 14.5869C19.1708 14.5869 22 11.7692 22 8.29344C22 4.81767 19.1708 2 15.6807 2C12.1907 2 9.3615 4.81767 9.3615 8.29344C9.3615 9.90338 10.0963 11.0743 10.0963 11.0743L2.45441 18.6849C2.1115 19.0264 1.63143 19.9143 2.45441 20.7339L3.33616 21.6121C3.67905 21.9048 4.54119 22.3146 5.2466 21.6121L6.27531 20.5876C7.30403 21.6121 8.4797 21.0267 8.92058 20.4412C9.65538 19.4167 8.77362 18.3922 8.77362 18.3922L9.06754 18.0995C10.4783 19.5045 11.7128 18.6849 12.1537 18.0995C12.8885 17.075 12.1537 16.0505 12.1537 16.0505C11.8598 15.465 11.272 15.465 12.0067 14.7333L12.8885 13.8551C13.5939 14.4405 15.0439 14.5869 15.6807 14.5869Z" stroke="#ffffff" stroke-width="1.5" stroke-linejoin="round"></path> <path d="M17.8853 8.29353C17.8853 9.50601 16.8984 10.4889 15.681 10.4889C14.4635 10.4889 13.4766 9.50601 13.4766 8.29353C13.4766 7.08105 14.4635 6.09814 15.681 6.09814C16.8984 6.09814 17.8853 7.08105 17.8853 8.29353Z" stroke="#ffffff" stroke-width="1.5"></path> </g></svg>
     </button>
 
     <!-- BOTÃO FLUTUANTE DE AÇÃO (FAB) -->
     <button type="button" id="fab-open-wizard" class="fab-add-btn" onclick="openWizardModal()" title="Nova Transação">
-        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <svg viewBox="0 0 24 24" width="35" height="35" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
             <line x1="12" y1="5" x2="12" y2="19"></line>
             <line x1="5" y1="12" x2="19" y2="12"></line>
         </svg>
